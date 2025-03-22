@@ -1,0 +1,87 @@
+body{
+        background-color: rgba(47, 108, 213, 0.379);
+    }
+ul {
+background-color: rgb(147, 229, 158);
+
+}
+
+.lis{
+    list-style-type: '\2764';
+ list-style-image: url(изображения\im.png);
+    padding-left: 20px;
+}
+
+
+td>img {/*дочерние*/
+
+width: 200px;
+    height: 200px;
+    border-radius: 20px 20px;
+
+    border: 5pt solid #5200af;
+    box-shadow: 0 17px 32px rgba(86, 9, 127, 0.74);/* Тень */
+   
+}
+
+
+td b { /*контекстные*/
+color: rgb(60, 0, 128);
+    /* Синий цвет текста */
+}
+
+
+.styled-image:hover {
+    transform: scale(1.3);
+    /* Увеличение при наведении */
+}
+
+          @keyframes rotate {
+              from {
+                  transform: rotate(0deg);
+              }
+    
+              to {
+                  transform: rotate(360deg);
+              }
+            }
+              .rotating-element {
+                  animation: rotate 2s linear infinite;
+                  /* Поворот на 360 градусов за 2 секунды */
+              }
+
+
+
+p::first-letter {/*псевдоэлемент*/
+    font-family: 'Times New Roman', Times, serif;
+    /* Гарнитура шрифта первой буквы */
+    font-size: 2em;
+    /* Размер первой буквы */
+    color: rgb(3, 77, 86);
+    /* Красный цвет текста */
+    font-weight: 600;
+}
+
+a:link {
+    color: rgb(99, 216, 134);
+    /* Цвет непосещенных ссылок */
+}
+
+a:visited {
+    color: rgb(22, 255, 251);
+    /* Цвет посещенных ссылок */
+}
+
+a:hover {
+    color: #f00;
+    /* Цвет ссылок при наведении на них
+курсора мыши */
+}
+
+a:active {
+    color: #ff0;
+    /* Цвет активных ссылок */
+}
+
+
+
