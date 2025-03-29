@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        #main {
+            display: flex;
+            /* делает #main флекс-контейнером*/
+            flex: 1;
+            /* гарантирует, что он будет расти так, чтобы занимать максимум доступного пространства*/
+        }
+
+        #main>#kontent {
+            /*контент справа*/
+            flex: 1;
+        }
+
+        #levo>nav {
+            flex: 50%;
+            background: rgb(240, 198, 152);
+        }
+
+        #levo>#pod_nav {
+            flex: 50%;
+            background: rgb(224, 153, 99);
+        }
+
+        #main>#levo
+
+        /*навигация слевo*/
+            {
+            display: flex;
+            order: -1;
+            flex-direction: column;
+            flex: 0 0 15vw;
+        }
+
+        #main>#kontent {
+            display: flex;
+            order: 1;
+            flex-direction: column;
+
+        }
+
+        #kontent>#kontent1,
+        #kontent>#kontent3 {
+            flex: 25%;
+            display: flex;
+        }
+
+        #kontent>#kontent2,
+        #kontent>#kontent4 {
+            flex: 25%;
+            background: rgb(255, 255, 255);
+        }
+
+
+
+
+        #kontent1>#kontent1_1,
+        #kontent3>#kontent2_1 {
+            flex: 50%;
+            background: rgb(42, 1, 13);
+            display: flex;
+            color: #db5b5b;
+        }
+
+        #kontent1>#kontent1_2,
+        #kontent3>#kontent2_2 {
+            flex: 50%;
+            background: #db7f5b;
+            display: flex;
+        }
+
+
+
+
+
+
+        header,
+        /*размер, цвет, цвет шрифта подвала и шапки*/
+        footer {
+            background: rgb(89, 2, 32);
+            height: 10vh;
+            color: #f9f9f9;
+        }
+
+        footer {
+            height: 15vh;
+        }
+
+
+        header,
+        footer,
+        nav,
+        #pod_nav,
+        #kontent1_1,
+        #kontent1_2,
+        #kontent2,
+        #kontent2_1,
+        #kontent2_2,
+        #kontent4
+
+        /*отступ от края для содержимого*/
+            {
+            padding: 1em
+        }
+    </style>
+</head>
+
+<body>
+    <header>Шапка</header>
+    <div id="main">
+
+        <div id="kontent">
+            <div id="kontent1">
+                <div id="kontent1_1">1_1</div>
+                <div id="kontent1_2">1_2</div>
+            </div>
+            <div id="kontent2">2</div>
+            <div id="kontent3">
+                <div id="kontent2_1">2_1</div>
+                <div id="kontent2_2">2_2</div>
+            </div>
+            <div id="kontent4">4</div>
+        </div>
+        <div id="levo">
+            <nav>Навигация</nav>
+            <div id="pod_nav">Под навигацией</div>
+        </div>
+
+
+    </div>
+    <footer>Подвал</footer>
+</body>
