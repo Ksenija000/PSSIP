@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа со строками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .result {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Работа со строками</h1>
+
+    <div class="result" id="lengthResult"></div>
+    <div class="result" id="concatResult"></div>
+    <div class="result" id="upperCaseResult"></div>
+
+    <script>
+        // 1. Создание строковых переменных
+        const s1 = "Савило"; 
+        const s2 = "ул. Школьная, д. 20"; 
+
+        // 2. Определение длины строки s1
+        const s1Length = s1.length;
+        document.getElementById('lengthResult').textContent =
+            `Длина строки s1("${s1}"): ${ s1Length } символов`;
+
+        // 3. Сцепление строк s1 и s2
+        const concatenated = s1 + " " + s2;
+        document.getElementById('concatResult').textContent =
+            `Результат сцепления: "${concatenated}"`;
+
+        // 4. Преобразование строки s2 в верхний регистр
+        const s2UpperCase = s2.toUpperCase();
+        document.getElementById('upperCaseResult').textContent =
+            `s2 в верхнем регистре: "${s2UpperCase}"`;
+    </script>
+</body>
+
+</html>
