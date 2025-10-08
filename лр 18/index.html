@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма сбора данных</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form id="survey-form">
+        <label for="name">Ваше имя:</label><br>
+        <!-- Валидация через HTML5: мин. 2 символа, только буквы и пробелы -->
+        <input type="text" id="name" name="name" required minlength="2" pattern="[A-Za-zА-Яа-яЁё\s]+"><br><br>
+
+        <label for="email">Ваш email:</label><br>
+        <input id="email" name="email" required><br><br>
+
+        <label for="age">Ваш возраст:</label><br>
+        <select id="age" name="age" required>
+            <option value="">Выберите ваш возраст</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45+">45+</option>
+        </select><br><br>
+
+        <label for="aaaa">Ваше любимое животное:</label><br>
+        <input type="text" id="aaaa" name="aaaa" required><br><br>
+
+        <label for="bbb">Ваш любимы цвет:</label><br>
+        <input type="text" id="bbb" name="bbb" required><br><br>
+
+        <label>Вам понравилась страница?</label><br>
+        <label><input type="radio" name="agreement" value="yes" required> Да</label>
+        <label><input type="radio" name="agreement" value="no"> Нет</label><br><br>
+
+        <input type="checkbox" id="ch" name="acheck" required> Я не робот<br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script src="js/skript.js"></script>
+</body>
+
+</html>
