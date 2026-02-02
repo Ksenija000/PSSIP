@@ -1,0 +1,10 @@
+ body {
+     font-family: Arial;
+     font-size: 10%;
+     /* Размер текста */
+     color: chartreuse;
+     /*цвет текста*/
+     background-image: url("изо/милый-портрет-кота-квадратное-фото-105311158.jpg");
+     background-repeat: repeat-x;
+     /*повтор по горизонтали*/
+ }
