@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная Верстка</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            /* Убираем отступы по умолчанию */
+        }
+
+        #main {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 16% 42% 42%;
+            grid-template-rows: 10% 18.75% 18.75% 18.75% 18.75% 15%;
+            grid-template-areas:
+                "header header header"
+                "nav kontent1_1 kontent1_2"
+                "nav kontent2 kontent2"
+                "pod_nav kontent2_1 kontent2_2"
+                "pod_nav kontent4 kontent4"
+                "footer footer footer";
+        }
+
+        header {
+            grid-area: header;
+            background: rgb(89, 2, 32);
+            color: #f9f9f9;
+        }
+
+        nav {
+            grid-area: nav;
+            background: rgb(240, 198, 152);
+        }
+
+        #pod_nav {
+            grid-area: pod_nav;
+            background: rgb(224, 153, 99);
+        }
+
+        #kontent1_1 {
+            grid-area: kontent1_1;
+            background: rgb(42, 1, 13);
+            color: #db5b5b;
+        }
+
+        #kontent1_2 {
+            grid-area: kontent1_2;
+            background: #db7f5b;
+        }
+
+        #kontent2 {
+            grid-area: kontent2;
+            background: rgb(255, 255, 255);
+        }
+
+        #kontent2_1 {
+            grid-area: kontent2_1;
+            background: rgb(42, 1, 13);
+            color: #db5b5b;
+        }
+
+        #kontent2_2 {
+            grid-area: kontent2_2;
+            background: #db7f5b;
+        }
+
+        #kontent4 {
+            grid-area: kontent4;
+            background: rgb(255, 255, 255);
+        }
+
+        footer {
+            grid-area: footer;
+            background: rgb(89, 2, 32);
+            color: #f9f9f9;
+        }
+
+        /* Общие отступы для всех элементов */
+        header,
+        footer,
+        nav,
+        #pod_nav,
+        #kontent1_1,
+        #kontent1_2,
+        #kontent2,
+        #kontent2_1,
+        #kontent2_2,
+        #kontent4 {
+            padding: 1em;
+            overflow-wrap: break-word;
+            /* Перенос слов при необходимости */
+            word-wrap: break-word;
+            /* Поддержка старых браузеров */
+            hyphens: auto;
+            /* Гипенизация для переноса слов */
+        }
+
+        /* Мобильная версия */
+        @media (max-width: 768px) {
+            #main {
+                grid-template-columns: 1fr;
+                /* Одна колонка */
+                grid-template-rows: auto;
+                /* Автоматическая высота */
+                grid-template-areas:
+                    "header"
+                    "kontent1_1"
+                    "kontent1_2"
+                    "kontent2"
+                    "kontent2_1"
+                    "kontent2_2"
+                    "kontent4"
+                    "footer";
+            }
+
+            nav {
+                display: none;
+                /* Скрыть навигацию */
+            }
+
+            #pod_nav {
+                display: none;
+                /* Скрыть под навигацию */
+            }
+        }
+
+        /* Планшетная версия */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            #main {
+           
+                grid-template-areas:
+                    "header header header"
+                    "nav kontent1_1 kontent1_2"
+                     "nav kontent1_1 kontent1_2"
+                    "pod_nav kontent2_1 kontent2_2"
+                    "pod_nav kontent2_1 kontent2_2"
+                    "footer footer footer";
+            }
+        }
+
+  
+    </style>
+    </head>
+    
+    <body>
+        <div id="main">
+            <header>Шапка</header>
+            <div id="kontent1_1">Контент 1.1</div>
+            <div id="kontent1_2">Контент 1.2</div>
+            <div id="kontent2">Контент 1</div>
+            <div id="kontent2_1">Контент 2.1</div>
+            <div id="kontent2_2">Контент 2.2</div>
+            <div id="kontent4">Контент 2</div>
+            <nav>Навигация</nav>
+            <div id="pod_nav">Под навигацией</div>
+            <footer>Подвал</footer>
+        </div>
+    </body>
+    
+    </html>

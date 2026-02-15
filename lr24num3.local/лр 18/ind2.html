@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регулярные выражения в JavaScript</title>
+
+</head>
+
+<body>
+    <h2>1.Метод RegExp.test()</h2>
+    <!-- Метод test() проверяет, соответствует ли строка регулярному выражению, и возвращает true или false. -->
+    <div class="code">Результат:</div>
+    <div class="result" id="test-result"></div>
+
+    <h2>2. Метод RegExp.exec()</h2>
+    <!-- Метод exec() выполняет поиск совпадения в строке и возвращает массив с информацией о найденном совпадении или null -->
+    <div class="code">Результат:</div>
+    <div class="result" id="exec-result"></div>
+
+
+    <h2>3. Метод String.split() с регулярным выражением</h2>
+    <!-- Метод split() разделяет строку на массив подстрок, используя регулярное выражение в качестве разделителя. -->
+    <div class="code">Результат:</div>
+    <div class="result" id="split-result"></div>
+
+
+    <h2>4. Метод String.match() с различными флагами</h2>
+    <!-- Метод match() возвращает массив совпадений с регулярным выражением.
+             Без флага g - возвращает первое совпадение с группами захвата
+             С флагом g - возвращает все совпадения
+             С флагами g и m (многострочный режим)-->
+    <div class="code">Результат:</div>
+    <div class="result" id="match-result"></div>
+
+
+    <h2>5. Метод String.search()</h2>
+    <!-- Метод search() возвращает индекс первого совпадения с регулярным выражением или -1, если совпадение не найдено. -->
+    <div class="code">Результат:</div>
+    <div class="result" id="search-result"></div>
+
+    <h2>6. Метод String.replace() с регулярным выражением</h2>
+    <!-- Метод replace() заменяет совпадения с регулярным выражением на указанную строку или результат функции. -->
+    <div class="code">Результат:</div>
+    <div class="result" id="replace-result"></div>
+
+
+    <h2>7. Различные типы регулярных выражений</h2>
+    <!-- Примеры различных типов регулярных выражений-->
+    <div class="code">Результат:</div>
+    <div class="result" id="patterns-result"></div>
+
+
+    <script src="js/skript2.js"></script>
+</body>
+
+</html>

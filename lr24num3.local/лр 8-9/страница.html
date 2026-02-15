@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная Верстка</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_tl.css">
+    <link rel="stylesheet" href="css/style_pl.css">
+
+
+    <script type="text/javascript">
+        function show_confirm() {
+            var r = confirm("Подтвердите добавление карточки");
+            if (r == true) {
+                alert("Карточка добавлена");
+            }
+            else {
+                alert("Добавление карточки отменено");
+            }
+        }
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <div id="main">
+        <header>Шапка</header>
+        <div id="kontent1_1">
+            <form action="mailto:ksenijasavilo@gmail.com" enctype="text/plain" target="_self" class="forma" >
+                <div class="title_form">
+                    Обратная связь
+                </div>
+                <div class="text1">
+                    Здесь Вы можете отправить нам сообшение
+                </div>
+                <label for="name" class="pole_text">Ваше имя</label><br>
+                <input type="text" id="name" name="name" class="name_inp" required placeholder="Введите ваше имя"><br>
+                <label for="ema" class="pole_text pole_text_">E-mail</label><br>
+                <input type="text" id="email" name="email" class="email_inp" required
+                    placeholder="Введите ваш e-mail"><br>
+                <label for="name" class="pole_text pole_text_" id="sooo">Сообщение</label><br>
+                <div class="input-field">
+                    <textarea rows="3" class="soob_inp" placeholder="Введите ваше сообщение"></textarea>
+                </div>
+                <button id="file" name="file" class="btn_file" type="button">
+                    <div class="plas">+</div> Прикрепить файл
+                </button>
+
+                <div class="bloc_robo">
+                    <label class="text_robo"><input type="checkbox" name="robo" id="robo">
+                        <div class="ch2">Я не робот</div>
+                    </label><br>
+                    <img class="styled-image" src="img/Снимок экрана 2025-06-10 143713.png" alt="котик">
+                    <div class="reC">reCAPTCHA</div>
+                    <div class="konf" id="konf">Конфенденциальность - Условия использования</div>
+                </div>
+
+                <button type="submit" class="btn_otpr">Отправить</button>
+
+            </form>
+        </div>
+        <div id="kontent1_2">
+            <div class="cart">
+                <div class="cart_info">
+                    <div class="info_text1">Origammi design chair</div>
+                    <div class="info_text2">hammerhead</div>
+                    <div class="info_text3" id="skidca">€685</div>
+
+                    <div class="info_text_punct_continerrr">
+                        <div class="info_text_punct punct_ active">Description</div>
+                        <div class="info_text_punct punct1_" >Details</div>
+                    </div>
+
+                    <div class="info_line_continerrr">
+                        <div class="info_line _line1 active"></div>
+                        <div class="info_line _line2"></div>
+                    </div>
+
+                    <div class="info_text4">With a predatory stance that is streamlined for<br>
+                        dynamic speed the Hammerhead is instanly a visually<br>
+                        striking piece that really pushes the boundaies, reachig<br>
+                        and seaeching of how a new chair from can exist: The gill<br>
+                    </div>
+
+                    <div class="info_text_punct2_continerrr">
+                        <div class="info_text_punct2 punct2_" onClick="alert('Необходимо выбрать цвет')">Color</div>
+                        <div class="info_text_punct2 punct3_">Quantity</div>
+                    </div>
+
+                    <div class="info_radio_schet">
+                        <div class="info_radio">
+                            <label><input type="radio" name="color" value="yes" class="info_radio_" checked></label>
+                            <label><input type="radio" name="color" class="info_radio_" value="no"></label><br>
+                        </div>
+
+                        <div class="info_schet">
+                            <button id="minus" name="minus" class="info_minus" > - </button>
+                            <input type="number" name="qualntity" value="5" class="info_schet_1">
+                            <button id="plus" name="plus" class="info_plus"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="info_text5 info_text_punct2" id="summa">Total price</div>
+                    <div class="info_cena2" id="result">€3425</div>
+                    <button id="add" name="add" class="info_add" onclick="show_confirm()"> Add to card </button>
+                </div>
+
+
+
+                <div class="cart_tovar">
+                    <div class="bloc_img">
+                        <img src="img/stul.png" class="tovar_img" alt="img_t" title="товар1">
+                    </div>
+                    <div class="bloc_cirkle">
+                        <span class="dot dot1"></span>
+                        <span class="dot "></span>
+                        <span class="dot "></span>
+                        <span class="dot "></span>
+                        <span class="dot "></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="kontent2">
+            <A HREF="JavaScript:alert('Контент отсутствует');">Контент 1</A>
+
+        </div>
+        <div id="kontent2_1">Контент 2.1</div>
+        <div id="kontent2_2">Контент 2.2</div>
+        <div id="kontent4">Контент 2</div>
+        <nav>Навигация</nav>
+        <div id="pod_nav">Под навигацией</div>
+        <footer>Подвал</footer>
+    </div>
+
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

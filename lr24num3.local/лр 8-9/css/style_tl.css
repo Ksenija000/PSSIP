@@ -1,0 +1,458 @@
+
+/* Мобильная версия */
+@media (min-width: 323px) and(max-width: 768px) {
+
+        
+    #main {
+        display: grid;
+        /* height: 100%; */
+        grid-template-columns: auto;
+        /* Одна колонка */
+        grid-template-rows: auto;
+        /* Автоматическая высота */
+        grid-template-areas:
+            "header"
+            "kontent1_1"
+            "kontent1_2"
+            "kontent2"
+            "kontent2_1"
+            "kontent2_2"
+            "kontent4"
+            "footer";
+    }
+
+    nav {
+        display: none;
+        /* Скрыть навигацию */
+    }
+
+    #pod_nav {
+        display: none;
+        /* Скрыть под навигацию */
+    }
+
+
+
+
+    /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    .forma {
+        /**/
+        /* width: 235px; */
+        width: 35%;
+        padding: 0.5em;
+        border-radius: 2px;
+        border: 0.5px solid rgb(173, 173, 173);
+    }
+
+    .title_form {
+        /**/
+        font-size: 75%;
+    }
+
+    .text1 {
+        /**/
+        font-size: 55%;
+        padding-top: 1.5%;
+        padding-bottom: 2.25%;
+    }
+
+    .pole_text {
+        /**/
+        font-size: 50%;
+        margin-bottom: -2%;
+    }
+
+    .pole_text_ {
+        /**/
+        margin-top: -4%;
+    }
+
+    .name_inp {
+        /**/
+        border-radius: 2.25px;
+        border: 0.5px solid rgb(173, 173, 173);
+        font-size: 45%;
+        padding: 1%;
+        height: 5%;
+        margin-top: -4%;
+    }
+
+    .email_inp {
+        /**/
+        border-radius: 2.25px;
+        border: 0.5px solid rgb(173, 173, 173);
+        font-size: 45%;
+        padding: 1%;
+        height: 5%;
+        margin-top: -4%;
+    }
+
+    .soob_inp {
+        /**/
+        border-radius: 2.25px;
+        border: 0.5px solid rgb(173, 173, 173);
+        font-size: 45%;
+        height: 5vh;
+        padding: 1%;
+        margin-top: -4%;
+    }
+
+    .btn_file {
+        /**/
+        border: 0.5px solid rgb(53, 149, 75);
+        border-radius: 2px;
+
+        font-size: 1.1vw;
+        margin-top: 2.25%;
+        margin-bottom: 3.5%;
+
+
+        width: 38%;
+        height: 5%;
+    }
+
+    .plas {
+        /**/
+        font-weight: bold;
+        font-size: 120%;
+        margin-right: 2%;
+    }
+
+    .bloc_robo {
+        background-color: rgb(247, 247, 247);
+        width: 65%;
+        height: auto;
+        padding-bottom: 2%;
+        border-radius: 3px;
+        border: 1px solid rgb(173, 173, 173);
+
+        display: grid;
+
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 55% 15% 15%;
+        column-gap: 0%;
+        row-gap: 7%;
+        grid-template-areas:
+            "ro1 ro2"
+            "ro1 ro3"
+            "ro1 ro4";
+
+        /* place-items: center; */
+
+        position: relative;
+    }
+
+    #robo {
+        /***/
+
+        width: 3vw;
+        height: 3vw;
+        margin-left: 15%;
+        margin-top: 30%;
+        grid-area: ch1;
+
+    }
+
+    .ch2 {
+        /**/
+        grid-area: ch2;
+        margin-top: 12%;
+        width: 150%;
+    }
+
+    .text_robo {
+        /**/
+        /* background-color: #db5b5b; */
+        grid-area: ro1;
+        margin-top: -1.5%;
+        margin-left: 3.5%;
+
+        font-family: sans-serif;
+
+        font-size: 1.5vw;
+        text-align: center;
+        color: rgb(0, 0, 0);
+
+        display: grid;
+        column-gap: 10%;
+        grid-template-areas:
+            "ch1 ch2";
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .styled-image {
+        /**/
+        grid-area: ro2;
+
+        width: 30%;
+        height: 100%;
+
+        margin-left: 50%;
+        margin-top: 3%;
+
+    }
+
+    .reC {
+        /**/
+
+        grid-area: ro3;
+
+        font-family: sans-serif;
+        /* margin-left: 60%; */
+        top: 40%;
+        font-size: 1.2vw;
+        text-align: center;
+        color: rgb(143, 143, 143);
+
+        position: absolute;
+        right: 7%;
+    }
+
+    .konf {
+        /**/
+        /**/
+
+        grid-area: ro4;
+
+        font-family: sans-serif;
+        /* margin-left: -9%; */
+        font-size: 0.8vw;
+        text-align: right;
+        color: rgb(143, 143, 143);
+
+        width: 30vw;
+        top: 40%;
+        position: absolute;
+        right: 7%;
+    }
+
+
+
+    .btn_otpr {
+        /**/
+        border: 0.5px solid rgb(42, 100, 150);
+        border-radius: 2px;
+        font-size: 0.9vw;
+        width: 20%;
+        height: 1.6vh;
+        margin-top: 5%;
+
+        margin-left: 80%;
+
+
+    }
+
+
+
+
+
+
+
+        /*/////КАРТОЧКА/////////////////////////////////////////////////////////////////////////////////*/
+        /*/////КАРТОЧКА/////////////////////////////////////////////////////////////////////////////////*/
+        /*/////КАРТОЧКА/////////////////////////////////////////////////////////////////////////////////*/
+        .cart {
+            background-color: #a6cf2d;
+        /* position: absolute; */
+            width:auto;
+            /* height: 157vw; */
+            height: auto;
+            display: grid;
+            grid-template-columns:auto;
+            grid-template-rows: 42% 58%;
+    
+            grid-template-areas:
+                "bloc1 bloc2"
+                "bloc1 bloc2";
+        }
+    
+        .cart_info {
+            padding: 1.2vw;/**/
+
+        }
+    
+        .cart_tovar {
+            grid-template-rows: 80% 20%;/**/
+    
+        }
+    
+    
+        .tovar_img {
+            width: 90%;
+            height: 85%;
+        }
+    
+        .dot {/**/
+            width: 2.4vw;
+            height: 2.4vw;
+            border-radius: 50%;
+            margin-left: 0.9vw;
+        }
+    
+    
+    
+        /*------------------------------------*/
+        .info_text1 {/**/
+            font-size: 2.4vw;
+    
+            margin-top: 0.5vw;
+        }
+    
+        .info_text2 {/**/
+            font-size: 1.6vw;
+    
+            margin-top: 0.2vw;
+        }
+    
+        .info_text3 {/**/
+            font-size: 2.4vw;
+            margin-top: 0.8vw;
+        }
+    
+    
+        .info_text_punct {/**/
+            font-size: 2vw;
+        }
+    
+        ._line1 {
+            width: 30%;
+        }
+    
+        ._line2 {
+            width: 63%;
+        }
+    
+        .info_line {/**/
+            height: 0.2vw;
+        }
+    
+        .info_line.active {/**/
+            height: 0.25vw;
+        }
+    
+        .info_text4 {/**/
+            font-size: 1.8vw;
+            line-height: 2.8vw;
+    
+            margin-top: 1vw;
+        }
+    
+        .info_text_punct2 {/**/
+            font-size: 2vw;
+        }
+    
+        .info_cena2 {/**/
+            font-size: 1.9vw;
+        }
+    
+        .info_add {/**/
+            font-size: 1.8vw;
+            border-radius: 2.6vw;
+    
+            width: 47vw;
+            height: 5.4vw;
+    
+            margin-top: 1.8vw;
+            margin-left: 3vw;
+        }
+    
+    
+        input[type="radio"] {/**/
+            width: 2.4vw;
+            height: 2.4vw;
+            border-radius: 50%;
+        }
+    
+    
+        input[type="radio"]:checked {/**/
+            border: 0.2vw solid #6f6d79;
+            width: 3.3vw;
+            height: 3.3vw;
+            /* Изменяем цвет границы при выборе */
+        }
+    
+        input[type="radio"]:checked::before {/**/
+            width: 2.4vw;
+            height: 2.4vw;
+            margin: 0.28vw;
+            margin-top: 0.27vw;
+            border-radius: 50%;
+        }
+    
+    
+        .info_minus {/**/
+            font-size: 1.6vw;
+            padding-left: 1vw;
+    
+            border-top-left-radius: 2.6vw;
+            border-bottom-left-radius: 2.6vw;
+    
+            width: 3.2vw;
+            height: 3.2vw;
+        }
+    
+        .info_plus {/**/
+          
+            font-size: 1.6vw;
+            padding-right: 1vw;
+    
+            border-top-right-radius: 2.6vw;
+            border-bottom-right-radius: 2.6vw;
+    
+            width: 3.2vw;
+            height: 3.2vw;
+        }
+    
+    
+        .info_schet_1 {/**/
+            font-size: 1.6vw;
+            width: 3.6vw;
+            height: 3.2vw;
+        }
+    
+    
+        .info_text_punct_continerrr {/**/
+            height: 2.8vw;
+            margin-top: 3.2vw;
+        }
+ 
+    
+        .punct1_ {/**/
+            margin-left: 3.7vw;
+        }
+    
+        .info_text_punct2_continerrr {/**/
+            margin-top: 3vw;
+        }
+    
+        .punct3_ {/**/
+            margin-left: 11vw;
+        }
+    
+        .info_radio_schet {/**/
+            margin-top: 1vw;
+        }
+    
+        .info_radio {/**/
+            margin-left: -0.8vw;
+        }
+    
+        .info_schet {/**/
+            margin-left: 10.8vw;
+        }
+    
+        .info_text5 {/**/
+            margin-top: 2.4vw;
+        }
+    
+        .info_cena2 {/**/
+            margin-top: 0.6vw;
+            font-size: 2.6vw;
+        }
+}
+

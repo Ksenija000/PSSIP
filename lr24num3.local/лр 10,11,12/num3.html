@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с массивом</title>
+    <style>
+        .container {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            max-width: 500px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .output {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Работа с массивом</h2>
+        <p>Введите 10 целых чисел через запятую:</p>
+        <input type="text" id="arrayInput" placeholder="Например: 5, -3, 0, 12, -7, 8, -2, 4, -9, 1">
+        <button onclick="processArray()">Обработать массив</button>
+
+        <div class="output" id="originalArray"></div>
+        <div class="output" id="negativeElements"></div>
+        <div class="output" id="sortedArray"></div>
+    </div>
+
+    <script>
+        function processArray() {
+            // Получаем ввод пользователя
+            const input = document.getElementById('arrayInput').value;
+
+            // Преобразуем строку в массив чисел
+            const originalArray = input.split(',')
+                .map(item => parseInt(item.trim(), 10))
+                .filter(item => !isNaN(item)); // Фильтруем нечисловые значения
+
+            // Проверяем, что в массиве ровно 10 элементов
+            if (originalArray.length !== 10) {
+                alert('Пожалуйста, введите ровно 10 целых чисел, разделенных запятыми!');
+                return;
+            }
+
+            // 1. Выводим исходный массив
+            document.getElementById('originalArray').innerHTML =
+                `<strong>Исходный массив:</strong> [${ originalArray.join(', ') }]`;
+
+            // 2. Находим отрицательные элементы
+            const negativeElements = originalArray.filter(num => num < 0);
+            document.getElementById('negativeElements').innerHTML =
+                `<strong>Отрицательные элементы:</strong> [${ negativeElements.join(', ') }]`;
+
+            // 3. Сортируем массив по убыванию (без изменения оригинала)
+            const sortedArray = [...originalArray].sort((a, b) => b - a);
+            document.getElementById('sortedArray').innerHTML =
+                `<strong>Массив по убыванию:</strong> [${ sortedArray.join(', ') }]`;
+        }
+    </script>
+</body>
+
+</html>
