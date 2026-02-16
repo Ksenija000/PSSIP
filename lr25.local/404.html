@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена - 404</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&family=Open+Sans:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Tinos', serif;
+        }
+
+        body {
+            background: rgb(255, 255, 255);
+            color: rgba(214, 126, 53, 1);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .black-strip {
+            height: 20%;
+            background-color: #000;
+            width: 100%;
+        }
+
+        .top-strip {
+            background: linear-gradient(to bottom, #000 0%, #222 100%);
+        }
+
+        .bottom-strip {
+            background: linear-gradient(to top, #000 0%, #222 100%);
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 80%;
+        }
+
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .error-image {
+            height: 200px;
+            width: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+        }
+
+        .error-code {
+            font-size: 140px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+            line-height: 1;
+            color: rgba(255, 116, 0, 1);
+        }
+
+        .error-message {
+            font-size: 28px;
+            margin: 20px 0 30px;
+            color: rgba(214, 126, 53, 1);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: rgba(255, 116, 0, 1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid transparent;
+        }
+
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 130, 20, 1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .home-button:active {
+            transform: translateY(-1px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Декоративные элементы */
+        .decoration {
+            position: absolute;
+            opacity: 0.1;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 100px;
+            }
+
+            .error-message {
+                font-size: 22px;
+            }
+
+            .error-image {
+                height: 150px;
+            }
+
+            .content-wrapper {
+                padding: 20px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 80px;
+            }
+
+            .error-message {
+                font-size: 18px;
+            }
+
+            .home-button {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="black-strip top-strip"></div>
+
+    <div class="content-wrapper">
+        <div class="decoration"></div>
+        <div class="decoration"></div>
+
+        <div class="error-container">
+            <img src="image/img_pk/Mask_Group.png" class="error-image" alt="Страница в разработке"
+                title="Страница в разработке">
+            <h1 class="error-code">404</h1>
+            <p class="error-message">Эта страница на стадии разработки</p>
+            <a href="index.html" class="home-button">Вернуться на главную</a>
+        </div>
+    </div>
+
+    <div class="black-strip bottom-strip"></div>
+</body>
+
+</html>
