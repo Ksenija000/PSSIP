@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Перенаправление на 404 страницу
+ErrorDocument 404 /404Error.php
+
+# Если запрашивается несуществующий файл или директория
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /404Error.php [L]
