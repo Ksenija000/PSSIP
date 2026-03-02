@@ -48,9 +48,9 @@ ________ ИНСТРУКЦИЯ ПО УСТАНОВКЕ ________
      $pass = '';
 
 5. ПРОВЕРКА РАБОТОСПОСОБНОСТИ
-   - Главная страница: http://localhost/kp1.local/
-   - Каталог товаров: http://localhost/kp1.local/product_catalog.php
-   - Админ-панель: http://localhost/kp1.local/admin/
+   - Главная страница: http://localhost/название_проекта/
+   - Каталог товаров: http://localhost/название_проекта/product_catalog.php
+   - Админ-панель: http://localhost/название_проекта/admin/
 
 ________ ОСОБЕННОСТИ ПРОЕКТА ________
 
